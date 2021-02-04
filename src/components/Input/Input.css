@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.input {
+  height: 40px;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #ccc;
+}
+
+.small {
+  width: 10%;
+}
+
+.medium {
+  width: 25%;
+}
+
+.large {
+  width: 40%;
+}
