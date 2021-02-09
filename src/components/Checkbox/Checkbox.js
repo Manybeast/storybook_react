@@ -2,52 +2,6 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import './Checkbox.css';
 
-// export default class Checkbox extends React.Component {
-//   constructor(props) {
-//     super(props);
-//
-//     this.state = { checked: false };
-//     this.onChange = this.handleChange.bind(this);
-//
-//     console.log('constructor');
-//   }
-//
-//   shouldComponentUpdate(nextProps, nextState, nextContext) {
-//     console.log('shouldComponentUpdate');
-//
-//     return true;
-//   }
-//
-//   componentDidMount() {
-//     console.log('componentDidMount');
-//   }
-//
-//   componentDidUpdate(prevProps, prevState, prevContext) {
-//     console.log('componentDidUpdate')
-//   }
-//
-//   componentWillUnmount() {
-//     console.log('componentWillUnmount');
-//   }
-//
-//   handleChange() {
-//     console.log('Change');
-//     this.setState({ checked: !this.state.checked });
-//   }
-//
-//   render() {
-//     console.log('render');
-//
-//     return(
-//         <div>
-//           <h1>{this.props.header}</h1>
-//           <h3>{this.props.text}: {this.state.checked ? 'Checked' : 'Unchecked'}</h3>
-//           <input type="checkbox" onChange={this.onChange}/>
-//         </div>
-//     );
-//   }
-// }
-
 export const Checkbox = ({header, text, visible, ...props}) => {
   const [check, setCheck] = useState(() => {
     console.log('constructor');
@@ -59,9 +13,8 @@ export const Checkbox = ({header, text, visible, ...props}) => {
 
   const handleChange = () => {
     console.log('Changed');
-    setCheck(!check)
+    setCheck(!check);
   };
-
 
   const checkbox = useMemo(
       () => {

@@ -1,35 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Checkbox } from '../../components/Checkbox/Checkbox';
 
-class AppCheckbox extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isCheckboxVisible: true,
-    };
-  }
+const AppCheckbox = () => {
+  const [isCheckboxVisible, setCheckboxVisible] = useState(true);
 
-  handleSwitch() {
-    this.setState({isCheckboxVisible: !this.state.isCheckboxVisible});
-  }
+  const handleSwitch = () => {
+    setCheckboxVisible(!isCheckboxVisible);
+  };
 
-  render() {
-    return (
-        <div>
-          <button onClick={this.handleSwitch.bind(this)}>
-            Show/Hide checkbox
-          </button>
-          {
-            this.state.isCheckboxVisible &&
-                <Checkbox
-                header="Checkbox"
-                text="is"
-                visible={this.state.isCheckboxVisible}
-                />
-          }
-        </div>
-    )
-  }
-}
+  return (
+      <div>
+        <button onClick={handleSwitch}>
+          Show/Hide checkbox
+        </button>
+        {
+          isCheckboxVisible &&
+          <Checkbox
+              header="Checkbox"
+              text="is"
+              visible={isCheckboxVisible}
+          />
+        }
+      </div>
+  )
+};
 
 export default AppCheckbox;
