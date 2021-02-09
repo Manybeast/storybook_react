@@ -60,3 +60,7 @@ Checkbox.propTypes = {
   text: PropTypes.string,
   visible: PropTypes.bool
 };
+
+Checkbox.defaultProps = {
+  visible: true
+};
